@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 130.0
+var SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 var jump_count = 0
 var max_jumps = 2
@@ -48,3 +48,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+	if Input.is_action_just_pressed("sprint"):
+		SPEED = 200.0
