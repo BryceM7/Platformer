@@ -48,7 +48,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
+	
+	#sprint
 	if Input.is_action_just_pressed("sprint"):
 		SPEED = 200.0
 	if Input.is_action_just_released("sprint"):

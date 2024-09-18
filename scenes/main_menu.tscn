@@ -8,7 +8,12 @@
 texture = ExtResource("2_60l56")
 modulate_color = Color(0.525101, 0.525101, 0.525101, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmr05"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71tef"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cace"]
 bg_color = Color(0.76662, 0.76662, 0.76662, 1)
@@ -24,12 +29,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71tef"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmr05"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -67,16 +67,16 @@ theme_override_constants/separation = 20
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_lm0jn")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/focus = SubResource("StyleBoxEmpty_xmr05")
+theme_override_styles/normal = SubResource("StyleBoxFlat_71tef")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4cace")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_a3akb")
-theme_override_styles/normal = SubResource("StyleBoxFlat_71tef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xmr05")
 text = "Start game"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
@@ -85,9 +85,9 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_lm0jn")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_71tef")
 theme_override_styles/hover = SubResource("StyleBoxFlat_71tef")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_71tef")
-theme_override_styles/normal = SubResource("StyleBoxFlat_71tef")
 text = "Exit"
 
 [node name="Label" type="Label" parent="."]
